@@ -38,7 +38,6 @@ p {
 
 .main {
   overflow: hidden;
-
   padding-top: 0;
   background-color: #f8f8f8;
   width: 320px;
@@ -201,8 +200,6 @@ p {
   .main_content {
     display: flex;
     gap: 10px;
-    /* margin-right: auto;
-    margin-left: auto; */
     width: 720px;
     height: 208px;
     gap: 10px;
