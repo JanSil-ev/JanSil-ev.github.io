@@ -112,6 +112,7 @@ p {
   margin-right: 16px;
   margin-left: 16px;
 }
+
 .main_content--text {
   width: 288px;
   overflow: hidden;
@@ -146,8 +147,8 @@ p {
   left: 3px;
 }
 
-.flex {
-  padding-left: 16px;
+.main_content--div {
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -253,7 +254,7 @@ p {
   .header_button--icon {
     display: flex;
     flex-direction: row;
-    /* width: 168px; */
+    align-items: center;
     gap: 10px;
     justify-content: space-between;
     padding-right: 20px;
@@ -261,8 +262,6 @@ p {
   }
   .header_button_high {
     display: flex;
-    flex-direction: row;
-    /* width: 168px; */
     gap: 10px;
     justify-content: space-between;
     padding-right: 20px;
