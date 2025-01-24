@@ -18,8 +18,13 @@ p {
   height: 88px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+}
+
+.header_button--icon {
+  background: inherit;
+  border: initial;
 }
 
 .header_button_left {
@@ -88,6 +93,8 @@ p {
   padding: 10px;
   padding-left: 16px;
   margin: 0;
+  background: inherit;
+  border: initial; 
 }
 
 .main_roll--button li {
@@ -115,17 +122,13 @@ p {
 
 .main_content--text {
   width: 288px;
+  height: 95px;
   overflow: hidden;
   font-size: 14px;
   font-family: "TT Lakes Medium";
   text-align: left;
 }
 
-.main_content--text--size-S,
-.main_content--text--size-M,
-.main_content--text--size-L {
-  margin: 0;
-}
 
 .main_content_btn--botton {
   font-family: "TT Lakes Medium";
@@ -171,10 +174,6 @@ p {
   .header_button--icon--m-size {
     display: none;
   }
-  .main_content--text--size-M,
-  .main_content--text--size-L {
-    display: none;
-  }
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
@@ -216,11 +215,8 @@ p {
   }
 
   .main_content--text {
-    width: 360px;
-    height: auto;
-  }
-  .main_content--text--size-L {
-    display: none;
+    width: auto;
+    height: 120px;
   }
 }
 
@@ -259,6 +255,8 @@ p {
     justify-content: space-between;
     padding-right: 20px;
     font-family: "TT Lakes Medium";
+    background: inherit;
+    border: initial;
   }
   .header_button_high {
     display: flex;
@@ -295,12 +293,11 @@ p {
 
   .main_content--div {
     width: 50%;
+    justify-content: flex-start;
   }
-  .main_content--text--size-L {
-    display: inline-block;
-    margin: 0;
-  }
+
 }
+
 
 @font-face {
   font-family: "TT Lakes Regular";
