@@ -1,82 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet" />
-    <title>Document</title>
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <header class="header">
-      <nav class="header__nav">
-        <div class="header_button_left">
-          <button class="header__button-icon header__button-icon--burger">
-          </button>
-          <a class="header__button-icon header__button-icon--divider header__button-icon--m-size">
-          </a>
-          <a class="header__button-icon header__button-logo">
-            <img src="icon/logo.svg" alt="Логотип" />
-          </a>
-        </div>
-        <div class="header__button-right">
-          <button class="header__button-icon header__button-icon--call header__button-icon--m-size">
-          </button>
-          <button class="header__button-icon header__button-icon--chat header__button-icon--m-size">
-          </button>
-          <button class="header__button-icon header__button-icon--profile header__button-icon--m-size">
-          </button>
-          <a class="header__button-icon header__button-icon--divider">
-          </a>
-          <button class="header__button-icon header__button-icon--repair">
-          </button>
-          <button class="header__button-icon header__button-icon-checkstatus">
-          </button>
-        </div>
-      </nav>
-    </header>
-    <main class="main">
-      <div class="main__header-high">
-        <h1 class="main__title">Услуги и сервисы</h1>
-        <div class="main__button-high">
-          <button class="main__button-icon">Оставить Заявку
-            <img src="icon/repair.svg" alt="Логотип" />
-          </button>
-          <button class="main__button-icon">
-            Статус Ремонта
-            <img src="icon/checkstatus.svg" alt="Логотип" />
-          </button>
-        </div>
-      </div>
-      <div class="main__roll">
-        <ul class="main__roll-buttons">
-          <li>
-            <button class="main__roll-button main__roll-button--active">
-              Ремонтируемые устройства
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>1.4</title>
+</head>
+<body>
+    <nav class="nav">
+        <header class="nav__header">
+            <button class="nav__button nav__button--menu">
+                <a href=""></a>
             </button>
-          </li>
-          <li><button class="main__roll-button">Дополнительные услуги</button></li>
-          <li><button class="main__roll-button">Цены на услуги</button></li>
-          <li><button class="main__roll-button">Специальные цены</button></li>
-          <li><button class="main__roll-button">Адреса сервисных центров</button></li>
-          <li><button class="main__roll-button">Специальные цены</button></li>
-          <li><button class="main__roll-button">Отзывы</button></li>
+            <button class="nav__button nav__button--logo">
+                <a href=""></a>
+            </button>
+            <button class="nav__button nav__button--search">
+                <a href=""></a>
+            </button>
+        </header>
+        <ul class="nav__list">
+            <li class="nav__list--item"><a href="#" class="nav__link">Ремонт техники</a></li>
+            <li class="nav__list--item"><a href="#" class="nav__link">Услуги и сервисы</a></li>
+            <li class="nav__list--item"><a href="#" class="nav__link">Корпоративным клиентам</a></li>
+            <li class="nav__list--item"><a href="#" class="nav__link">Продавцам техники</a></li>
+            <li class="nav__list--item"><a href="#" class="nav__link">Партнерам</a></li>
+            <li class="nav__list--item"><a href="#" class="nav__link">Производителям</a></li>
+            <li class="nav__list--item"><a href="#" class="nav__link">Наши сервисные центры</a></li>
+            <li class="nav__list--item"><a href="#" class="nav__link">Контакты</a></li>
         </ul>
-      </div>
-      <section class="main__content">
-        <div class="main__content-div">
-          <div class="main__content-text">
-            <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-
-              Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
-            </p>
-          </div>
-          <div class="main__content-btn">
-            <button class="main__content-button">Читать далее</button>
-          </div>
+<footer class="footer">
+        <div class="footer__buttons">
+            <button class="footer__button footer__button-mob"></button>
+            <button class="footer__button footer__button-mes"></button>
+            <button class="footer__button footer__button-cont"></button>
         </div>
-        <img class="main__content-img" src="icon/Picture.png" alt="картинка" />
-      </section>
-    </main>
-  </body>
+        <div class="footer__contact">
+            <a href="mailto:mail@cps.com" class="footer__contact-mail">mail@cps.com</a>
+            <a href="tel:88008808900" class="footer__contact-namb">8 800 880 8900</a>
+        </div>
+        <div class="footer__lang">
+            <button class="footer__lang-link">RU</button>
+            <button class="footer__lang-link">EN</button>
+            <button class="footer__lang-link">CH</button>
+        </div>
+    </footer>
+    </nav>
+</body>
 </html>
+
+
