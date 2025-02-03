@@ -1,5 +1,22 @@
+@font-face {
+  font-family: "TT Lakes Regular";
+  src: url(/fonts/TTLakes/TTLakes-Regular.ttf);
+}
+
+@font-face {
+  font-family: "TT Lakes Medium";
+  src: url(/fonts/TTLakes/TTLakes-Medium.ttf);
+}
+
+@font-face {
+  font-family: "TT Lakes Bold";
+  src: url(/fonts/TTLakes/TTLakes-Bold.ttf);
+}
+
 body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 p {
@@ -22,56 +39,42 @@ p {
   align-items: center;
 }
 
-
-.header__button-icon-1, .header__button-icon-2
-  ,.header__button-icon-3
-  ,.header__button-icon-4
-  ,.header__button-icon-5
-  ,.header__button-icon-6
-  ,.header__button-icon-7
-  ,.header__button-icon-8
-  ,.header__button-icon-9
-   {
-    border: initial;
+.header__button-icon {
+  border: initial;
 }
-.header__button-icon-1 {
+.header__button-icon--burger {
   background: url(/icon/burger.svg) no-repeat center;
   width: 40px;
   height: 40px;
- 
 }
-.header__button-icon-2 {
+.header__button-icon--divider {
   background: url(/icon/divider.svg) no-repeat center;
   width: 40px;
   height: 40px;
 }
 
-.header__button-icon-4 {
+.header__button-icon--call {
   background: url(/icon/call.svg) no-repeat center;
   width: 40px;
   height: 40px;
 }
-.header__button-icon-5 {
+.header__button-icon--chat {
   background: url(/icon/chat.svg) no-repeat center;
   width: 40px;
   height: 40px;
 }
-.header__button-icon-6 {
+.header__button-icon--profile {
   background: url(/icon/profile.svg) no-repeat center;
   width: 40px;
   height: 40px;
 }
-.header__button-icon-7 {
-  background: url(/icon/divider.svg) no-repeat center;
-  width: 40px;
-  height: 40px;
-}
-.header__button-icon-8 {
+
+.header__button-icon--repair {
   background: url(/icon/repair.svg) no-repeat center;
   width: 40px;
   height: 40px;
 }
-.header__button-icon-9 {
+.header__button-icon-checkstatus {
   background: url(/icon/checkstatus.svg) no-repeat center;
   width: 40px;
   height: 40px;
@@ -134,10 +137,43 @@ p {
   white-space: nowrap;
   width: 100%;
   padding-top: 10px;
+  position: relative;
 }
 
 .main__roll::-webkit-scrollbar {
   width: 0;
+}
+
+.main__roll::after,
+.main__roll::before {
+  content: "";
+  position: fixed;
+  width: 40px;
+  height: 60px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.main__roll::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(248, 248, 248, 1),
+    rgba(248, 248, 248, 0)
+  );
+  top: 185px;
+  bottom: 0;
+}
+
+.main__roll::after {
+  right: 0;
+  top: 185px;
+  bottom: 0;
+  background: linear-gradient(
+    to left,
+    rgba(248, 248, 248, 1),
+    rgba(248, 248, 248, 0)
+  );
 }
 
 .main__roll-buttons {
@@ -164,16 +200,8 @@ p {
   border: initial;
 }
 
-.main__roll-buttons li {
+li {
   display: inline-block;
-}
-
-.main__roll-buttons a {
-  text-decoration: none;
-}
-
-.menu a:hover {
-  background-color: #b8ffec;
 }
 
 .main__roll-button--active {
@@ -197,6 +225,7 @@ p {
 }
 
 .main__content-button {
+  display: block;
   font-family: "TT Lakes Medium";
   padding-left: 20px;
   border: 0;
@@ -238,10 +267,6 @@ p {
 
   .header__button-icon--m-size {
     display: none;
-
-
-
-
   }
 }
 
@@ -286,31 +311,38 @@ p {
   .main__content-text {
     width: auto;
     height: 115px;
-    display:flex;
+    display: flex;
     white-space: pre-line;
   }
 }
 
 @media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
   .header {
     display: none;
   }
+
   .main {
-    width: 1120px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1120px;
   }
 
   .main__roll {
-    display: block;
     overflow: hidden;
-
+    white-space: wrap;
     width: 100%;
   }
 
-  .main__roll-button {
+  .main__roll-buttons {
     display: flex;
     flex-wrap: wrap;
+    flex-shrink: 3;
     gap: 5px;
+    min-width: 70px;
   }
 
   .main__header-high {
@@ -353,7 +385,8 @@ p {
   }
 
   .main__content-text {
-    width: 490px;
+    max-width: 100%;
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -367,19 +400,4 @@ p {
     width: 50%;
     justify-content: flex-start;
   }
-}
-
-@font-face {
-  font-family: "TT Lakes Regular";
-  src: url(/fonts/TTLakes/TTLakes-Regular.ttf);
-}
-
-@font-face {
-  font-family: "TT Lakes Medium";
-  src: url(/fonts/TTLakes/TTLakes-Medium.ttf);
-}
-
-@font-face {
-  font-family: "TT Lakes Bold";
-  src: url(/fonts/TTLakes/TTLakes-Bold.ttf);
 }
