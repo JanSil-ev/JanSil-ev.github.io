@@ -13,6 +13,14 @@
   src: url(/fonts/TTLakes/TTLakes-Bold.ttf);
 }
 
+
+button {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
 body {
   margin: 0;
   padding: 0;
@@ -39,46 +47,49 @@ p {
   align-items: center;
 }
 
-.header__button-icon {
+.round-icon {
   border: initial;
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
 }
-.header__button-icon--burger {
+.round-icon--burger {
   background: url(/icon/burger.svg) no-repeat center;
-  width: 40px;
-  height: 40px;
 }
-.header__button-icon--divider {
+.round-icon--divider {
   background: url(/icon/divider.svg) no-repeat center;
-  width: 40px;
-  height: 40px;
+
 }
 
-.header__button-icon--call {
+.round-icon--call {
   background: url(/icon/call.svg) no-repeat center;
-  width: 40px;
-  height: 40px;
+
 }
-.header__button-icon--chat {
+.round-icon--chat {
   background: url(/icon/chat.svg) no-repeat center;
-  width: 40px;
-  height: 40px;
+
 }
-.header__button-icon--profile {
+.round-icon--profile {
   background: url(/icon/profile.svg) no-repeat center;
-  width: 40px;
-  height: 40px;
+
 }
 
-.header__button-icon--repair {
+.round-icon--repair {
   background: url(/icon/repair.svg) no-repeat center;
-  width: 40px;
-  height: 40px;
+
 }
-.header__button-icon-checkstatus {
+.round-icon-checkstatus {
   background: url(/icon/checkstatus.svg) no-repeat center;
-  width: 40px;
-  height: 40px;
+
 }
+
+.round-icon--repair {
+  background: url(/icon/repair.svg) no-repeat center;
+}
+.round-icon--checkstatus {
+  background: url(/icon/checkstatus.svg) no-repeat center;
+}
+
 
 .main__button-icon {
   background: inherit;
@@ -257,7 +268,7 @@ li {
   height: auto;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 321px) {
   .header {
     width: 320px;
   }
@@ -270,19 +281,18 @@ li {
   }
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 321px) and (max-width: 769px) {
   .header {
-    width: auto;
-   max-width: 768px;
+  width: 100vw;
   }
 
   .header__nav {
     justify-content: space-between;
-    margin: 0 20px;
+    padding: 0 20px;
   }
 
-  .header_button_left {
-    gap: 20px;
+  .round-icon {
+   
   }
 
   .main__roll {
@@ -298,17 +308,10 @@ li {
     gap: 10px;
     width: 100%;
     height: 208px;
-    gap: 10px;
     justify-content: flex-start;
     padding-top: 30px;
   }
-/* 
-  .main__content-img {
-    width: 360px;
-    height: auto;
-    flex-grow: 1fr;
-    padding-top: 0;
-  } */
+
   .main__content-img {
     padding-top: 0px;
     height: auto;
@@ -324,7 +327,7 @@ li {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   body {
     display: flex;
     justify-content: center;
