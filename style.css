@@ -35,7 +35,7 @@ p {
 
 .header {
   height: 88px;
-
+  width: 100%;
   border-bottom: 1px solid #d9fff5;
 }
 
@@ -45,6 +45,7 @@ p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  justify-content: space-around;
 }
 
 .round-icon {
@@ -58,7 +59,7 @@ p {
 }
 .round-icon--divider {
   background: url(/icon/divider.svg) no-repeat center;
-
+  width: 2px;
 }
 
 .round-icon--call {
@@ -99,22 +100,22 @@ p {
 .header_button_left {
   display: flex;
   align-items: center;
-
-  gap: 10px;
+  justify-content: space-between;
+  width: 200px;
 }
 
 .header__button-right {
   display: flex;
   align-items: center;
-
-  gap: 20px;
+  justify-content: space-between;
+  width: 300px;
 }
 
 .main {
   overflow: hidden;
   padding-top: 0;
   background-color: #f8f8f8;
-  width: 320px;
+  width: 100%;
   height: 509px;
 }
 
@@ -269,15 +270,35 @@ li {
 }
 
 @media (max-width: 321px) {
-  .header {
-    width: 320px;
-  }
   .main__roll {
     width: 100%;
   }
 
   .header__button-icon--m-size {
     display: none;
+  }
+
+  .header__nav {
+    padding: 0 20px;
+  }
+
+  .header__button-right {
+    min-width: 90px;
+    gap: 10px;
+  }
+
+  .header_button_left {
+    width: 150px;
+    gap: 10px;
+  }
+
+  .header__nav {
+    justify-content: flex-start;
+  }
+
+  .round-icon--divider {
+    margin-right: auto;
+    margin-left: 10px;
   }
 }
 
@@ -291,9 +312,7 @@ li {
     padding: 0 20px;
   }
 
-  .round-icon {
-   
-  }
+
 
   .main__roll {
     width: 100%;
